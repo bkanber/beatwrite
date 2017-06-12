@@ -12,7 +12,7 @@ const Song = db.connection.define('Songs', {
         allowNull: true,
     },
     lyrics: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT('long'),
         unique: false,
         allowNull: true,
     },
