@@ -14,9 +14,7 @@ THERE ARE TWO SEPARATE PACKAGE JSONS!!!
 
 The client is a separate folder which has its own npm modules, scripts, and package.json.
 
-Server needs a config folder inside of src as well as a .env file inside of the main app folder.
-
-.env example:
+.env layout:
 
 DATABASE_HOST = localhost
 DATABASE_USERNAME = root
@@ -44,3 +42,4 @@ npm run bandev (this will build the client and then switch into the app/dist fol
 or you want to run the app from the main folder you need to go to the folder app/dist
 then
 node server.js
+
