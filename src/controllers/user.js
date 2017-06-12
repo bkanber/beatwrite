@@ -10,7 +10,8 @@ const Song = require('../models/song');
 const registrationValidation = require('./helpers/registrationValidation')
 
 function generateToken(user) {
-    return jwt.sign(user, config.secretAuthKey, {
+    console.log('the secret key is', process.env.SECRET_AUTH_KEY)
+    return jwt.sign(user, process.env.SECRET_AUTH_KEY, {
         expiresIn: 10080, // in seconds
     });
 }

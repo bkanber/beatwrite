@@ -6,7 +6,6 @@
 
 const jwt = require('jwt-simple')
 const User = require('./models/user');
-const config = require('config');
 
 module.exports.httpAuth = function (req, res, next) {
     const opts = {};
@@ -16,7 +15,7 @@ module.exports.httpAuth = function (req, res, next) {
     console.log('the token was', token)
     if(token){
         try{
-            var decoded = jwt.decode(token, config.secretAuthKey);
+            var decoded = jwt.decode(token, process.env.SECRET_AUTH_KEY);
         } catch (e){
             console.log('the error was', e)
             next(null, null)
@@ -46,7 +45,7 @@ module.exports.socketAuth = function (token, callback) {
 
     if(token){
         try{
-            var decoded = jwt.decode(token, config.secretAuthKey);
+            var decoded = jwt.decode(token, process.env.SECRET_AUTH_KEY);
         } catch (e){
             return callback({success: false})
         }

@@ -5,7 +5,7 @@ const aws = require('aws-sdk'),
 
 module.exports = async function(file_type) {
 
-    aws.config.update({accessKeyId: config.AWS_ACCESS_KEY, secretAccessKey: config.AWS_SECRET_KEY})
+    aws.config.update({accessKeyId: process.env.AWS_ACCESS_KEY, secretAccessKey: process.env.AWS_SECRET_KEY})
 
     const s3 = new aws.S3();
 
@@ -31,7 +31,7 @@ module.exports = async function(file_type) {
         return ({
             success: true,
             signed_request: data,
-            url: ('https://s3.amazonaws.com/' + config.AWS_S3_BUCKET + '/' + key),
+            url: ('https://s3.amazonaws.com/' + process.env.AWS_S3_BUCKET + '/' + key),
             key,
         });
     } catch (error) {

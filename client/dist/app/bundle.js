@@ -32417,12 +32417,12 @@
 
 /***/ }),
 /* 290 */
-/*!*************************************************************************************!*\
-  !*** external "{\"serverUrl\":\"http://www.beatwrite.com\",\"isProduction\":true}" ***!
-  \*************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** external "{\"serverUrl\":\"http://localhost:5000\",\"isProduction\":false}" ***!
+  \***********************************************************************************/
 /***/ (function(module, exports) {
 
-	module.exports = {"serverUrl":"http://www.beatwrite.com","isProduction":true};
+	module.exports = {"serverUrl":"http://localhost:5000","isProduction":false};
 
 /***/ }),
 /* 291 */

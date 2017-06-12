@@ -4,7 +4,7 @@
   "description": "API for app",
   "main": "server.js",
   "scripts": {
-    "build": "rimraf ./dist && babel src --out-dir dist && cp -a ./src/config ./dist && cp ./src/.env ./dist",
+    "build": "rimraf ./dist && babel src --out-dir dist && cp ./src/.env ./dist",
     "start": "node dist/server.js"
   },
   "engines": {
