@@ -1,0 +1,45 @@
+{
+  "name": "BeatWriteAPI",
+  "version": "1.0.0",
+  "description": "API for app",
+  "main": "server.js",
+  "scripts": {
+    "build": "rimraf ./dist && babel src --out-dir dist && cp -a ./src/config ./dist && cp ./src/.env ./dist",
+    "start": "node dist/server.js"
+  },
+  "engines": {
+    "node": "6.10.2"
+  },
+  "author": "Maximilian Schwarzmueller",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.63.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "~1.17.1",
+    "config": "^1.25.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "dotenv": "^4.0.0",
+    "ejs": "~2.5.6",
+    "express": "~4.15.2",
+    "express-validator": "^3.2.0",
+    "jsonwebtoken": "^7.4.1",
+    "jwt-simple": "^0.5.1",
+    "morgan": "~1.8.1",
+    "mysql": "^2.13.0",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "sequelize": "^3.30.4",
+    "serve-favicon": "~2.4.2",
+    "socket.io": "^1.7.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-eslint": "^6.1.2",
+    "babel-plugin-istanbul": "^2.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.8.0",
+    "babel-plugin-transform-strict-mode": "^6.11.3",
+    "babel-preset-stage-0": "^6.5.0",
+    "rimraf": "^2.6.1"
+  }
+}
