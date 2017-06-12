@@ -73789,7 +73789,7 @@
 	        token: '',
 	        username: '',
 	        songs: [],
-	        triedAuthentication: false
+	        triedAuthentication: true
 	    };
 	    var action = arguments[1];
 	
@@ -73813,7 +73813,13 @@
 	                loggedIn: true,
 	                triedAuthentication: true
 	            });
-	            state.songs = action.payload.songs.slice();
+	
+	            try {
+	                state.songs = action.payload.songs.slice();
+	            } catch (e) {
+	                console.log('error trying to set songs');
+	                state.songs = [];
+	            }
 	
 	            break;
 	        case "AUTHENTICATION_REJECTED":
